@@ -42,25 +42,8 @@
   <!-- 4. Menu -->
   <section id="menu">
     <h2>Menu</h2>
-    <div class="menu-list">
-      <div class="menu-card">
-        <img class="menu-img" src="img/Cream Latte.jpg" alt="Cream Latte">
-        <h3>Cream Latte</h3>
-        <p>부드러운 크림과 에스프레소가<br> 어우러진 시그니처 라떼</p>
-        <p class="price">6,500원</p>
-      </div>
-      <div class="menu-card">
-        <img class="menu-img" src="img/Classic Tiramisu.png" alt="Classic Tiramisu">
-        <h3>Classic Tiramisu</h3>
-        <p>진한 마스카포네 크림과<br> 커피 향을 담은 수제 티라미수</p>
-        <p class="price">7,000원</p>
-      </div>
-      <div class="menu-card">
-        <img class="menu-img" src="img/AVATAR Ade.jpg" alt="AVATAR Ade">
-        <h3>AVATAR Ade</h3>
-        <p>레몬과 허브를 사용한<br> 상큼한 시그니처 에이드</p>
-        <p class="price">6,000원</p>
-      </div>
+    <div class="menu-list" id="menu-list">
+      <!-- 메뉴 카드는 script.js에서 Supabase 데이터를 불러와 자동으로 채워줘 -->
     </div>
   </section>
 
@@ -83,6 +66,7 @@
     <p>&copy; <span id="year"></span> AVATAR CAFE. All rights reserved.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
   <script src="js/script.js"></script>
 </body>
 </html>
