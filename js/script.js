@@ -6,11 +6,17 @@ yearEl.textContent = new Date().getFullYear();
 const SUPABASE_URL = "https://zkrmrzhajvrodmjgaswz.supabase.co";
 const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inprcm1yemhhanZyb2Rtamdhc3d6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3OTAxNTU5MDMsImV4cCI6MjEwNTczMTkwM30.eZbnBsVVP0UIUhvMbuFH11hK6rcZXlkc5QO4R9RnaJ0";
 
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
-
 // Menu 테이블에서 메뉴 목록을 불러와 카드로 그려주기
 async function loadMenu() {
   const menuListEl = document.getElementById("menu-list");
+
+  if (!window.supabase) {
+    console.error("Supabase 라이브러리를 불러오지 못했습니다. index.html의 supabase-js <script> 태그를 확인하세요.");
+    menuListEl.innerHTML = "<p>메뉴를 불러오지 못했습니다. (Supabase 라이브러리 로드 실패)</p>";
+    return;
+  }
+
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
   const { data: menuItems, error } = await supabase
     .from("menu")

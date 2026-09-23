@@ -1,0 +1,79 @@
+/* 회원가입 페이지 전용 스타일 (기존 페이지의 색상/폰트 변수를 그대로 사용) */
+
+/* 회원가입 페이지에서는 로고가 홈으로 가는 링크(a)라 기본 링크 스타일 제거 */
+.logo {
+  color: var(--color-text);
+  text-decoration: none;
+}
+
+.signup-section {
+  min-height: calc(100vh - 65px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.signup-card {
+  width: 100%;
+  max-width: 360px;
+  background-color: var(--color-bg-alt);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 40px 30px;
+  text-align: center;
+}
+
+.signup-card h2 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.signup-desc {
+  font-size: 14px;
+  color: var(--color-text-soft);
+  margin-bottom: 28px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.signup-form input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid var(--color-border);
+  border-radius: 4px;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-size: 14px;
+  font-family: inherit;
+}
+
+.signup-form input::placeholder {
+  color: var(--color-text-soft);
+}
+
+.signup-form .btn {
+  width: 100%;
+  border: none;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+.signup-links {
+  margin-top: 20px;
+  font-size: 13px;
+  color: var(--color-text-soft);
+}
+
+.signup-links a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.signup-links a:hover {
+  color: var(--color-accent-dark);
+}

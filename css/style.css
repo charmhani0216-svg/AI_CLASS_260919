@@ -69,6 +69,12 @@ h2 {
   letter-spacing: 2px;
 }
 
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
 .nav-menu {
   list-style: none;
   display: flex;
@@ -83,6 +89,22 @@ h2 {
 
 .nav-menu a:hover {
   color: var(--color-accent);
+}
+
+.btn-login {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1px solid var(--color-accent);
+  border-radius: 20px;
+  color: var(--color-accent);
+  text-decoration: none;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.btn-login:hover {
+  background-color: var(--color-accent);
+  color: var(--color-bg);
 }
 
 /* 2. Hero */
@@ -195,6 +217,12 @@ footer {
     justify-content: center;
     gap: 10px;
     text-align: center;
+  }
+
+  .nav-right {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
   }
 
   .nav-menu {
